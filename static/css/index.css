@@ -95,11 +95,11 @@ background:linear-gradient(to bottom right,red,blue);
 }
 .image{
 position:absolute;
-top:160px;
+top:190px;
 left:800px;
-height:300px;
-width:300px;
-box-shadow:5px 5px 10px rgb(150, 219, 199);;
+height:285px;
+width:205px;
+box-shadow:5px 5px 15px rgb(150, 219, 199);;
 
 }
 
@@ -352,6 +352,7 @@ transform:translate(-50px,00px);
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows:50% 50% 50%;
+   
 }
 
 .grid1{
@@ -360,7 +361,7 @@ transform:translate(-50px,00px);
     height:40vh;
     width:80%;
     /* background-color:yellow; */
-    background-color:rgba(122, 114, 114, 0.575);
+    background-color:rgba(252, 218, 218, 0.575);
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -372,7 +373,7 @@ transform:translate(-50px,00px);
     box-shadow:2px 2px 15px 5px red;
 }
 .grid1 img{
-    height:21%;
+    height:18%;
 }
 
 .title1 h3{
@@ -385,7 +386,7 @@ transform:translate(-50px,00px);
     height:40vh;
     width:80%;
     /* background-color:yellow; */
-    background-color:rgba(122, 114, 114, 0.575);
+    background-color:rgba(252, 218, 218, 0.575);
 
     display:flex;
     flex-direction: column;
@@ -396,7 +397,7 @@ transform:translate(-50px,00px);
 }
 .grid2 img{
     margin-top:30px;
-    height:21%;
+    height:18%;
 }
 
 .grid2:hover{
@@ -419,7 +420,7 @@ transform:translate(-50px,00px);
     height:40vh;
     width:80%;
     /* background-color:yellow; */
-    background-color:rgba(122, 114, 114, 0.575);
+    background-color:rgba(252, 218, 218, 0.575);
 
 
     display:flex;
@@ -430,7 +431,7 @@ transform:translate(-50px,00px);
 
 }
 .grid3 img{
-    height:21%;
+    height:18%;
 }
 
 .grid3:hover{
@@ -442,7 +443,7 @@ transform:translate(-50px,00px);
     margin:0px;
     height:40vh;
     width:80%;
-    background-color:rgba(122, 114, 114, 0.575);
+    background-color:rgb(138, 122, 122);
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -451,7 +452,7 @@ transform:translate(-50px,00px);
 
 }
 .grid4 img{
-    height:21%;
+    height:18%;
 }
 .grid4:hover{
     box-shadow:2px 2px 15px 5px blueviolet;
@@ -462,7 +463,7 @@ transform:translate(-50px,00px);
     height:40vh;
     width:80%;
     /* background-color:yellow; */
-    background-color:rgba(122, 114, 114, 0.575);
+    background-color:rgb(138, 122, 122);
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -472,7 +473,7 @@ transform:translate(-50px,00px);
 }
 .grid5 img{
     margin-top:20px;
-    height:21%;
+    height:18%;
 }
 
 .grid5:hover{
@@ -484,7 +485,7 @@ transform:translate(-50px,00px);
     height:40vh;
     width:80%;
     /* background-color:yellow; */
-    background-color:rgba(122, 114, 114, 0.575);
+    background-color:rgb(138, 122, 122);
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -494,7 +495,7 @@ transform:translate(-50px,00px);
 }
 .grid6 img{
     margin-top:20px;
-    height:21%;
+    height:18%;
 }
 .grid .title6{
     line-height:20px;
@@ -509,7 +510,7 @@ transform:translate(-50px,00px);
     height:40vh;
     width:80%;
     /* background-color:yellow; */
-    background-color:rgba(122, 114, 114, 0.575);
+    background-color:rgba(240, 221, 221, 0.575);
 
     display:flex;
     flex-direction: column;
@@ -520,7 +521,7 @@ transform:translate(-50px,00px);
 }
 .grid7 img{
     margin-top:20px;
-    height:21%;
+    height:18%;
 }
 
 .grid7:hover{
@@ -533,7 +534,7 @@ transform:translate(-50px,00px);
     height:40vh;
     width:80%;
     /* background-color:yellow; */
-    background-color:rgba(122, 114, 114, 0.575);
+    background-color:rgba(240, 221, 221, 0.575);
 
     display:flex;
     flex-direction: column;
@@ -544,7 +545,7 @@ transform:translate(-50px,00px);
 }
 .grid8 img{
     margin-top:20px;
-    height:21vh;
+    height:25vh;
 }
 
 .grid8:hover{
@@ -557,7 +558,7 @@ transform:translate(-50px,00px);
     height:40vh;
     width:80%;
     /* background-color:yellow; */
-    background-color:rgba(139, 133, 133, 0.575);
+    background-color:rgba(240, 221, 221, 0.575);
     
     display:flex;
     flex-direction: column;
@@ -567,7 +568,7 @@ transform:translate(-50px,00px);
 
 }
 .grid9 img{
-    margin-top:20px;
+    margin-top:4px;
     height:21%;
 }
 

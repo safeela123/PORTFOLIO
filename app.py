@@ -1,5 +1,6 @@
-from flask import Flask, render_template,request,redirect,flash,url_for
+from flask import Flask, render_template,request,redirect,flash,url_for,send_from_directory
 from flask_mail import Mail,Message
+import os
 app=Flask(__name__)
 app.secret_key='6948ecfb326e597ac7df2e68cb3cc142'
 
@@ -9,6 +10,9 @@ app.config['MAIL_USE_TLS']=True
 app.config['MAIL_USERNAME']='safeelansrin42484@gmail.com'
 app.config['MAIL_PASSWORD']='...........'
 mail=Mail(app)
+
+BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+DOWNLOAD_FOLDER = os.path.join(BASE_DIR, 'downloads')
 
 @app.route('/')
 def index():
@@ -48,7 +52,10 @@ def project():
 @app.route('/#contactme')
 def contact():
     return render_template('index.html')
-       
+
+@app.route('/download/<filename>')
+def download_file(filename):
+    return send_from_directory('DOWNLOAD_FOLDER', filename, as_attachment=True)
 
 if __name__=='__main__':
     app.run(debug=True)
