@@ -8,7 +8,7 @@ app.config['MAIL_SERVER']='smtp.gmail.com'
 app.config['MAIL_PORT']=587
 app.config['MAIL_USE_TLS']=True
 app.config['MAIL_USERNAME']='safeelansrin42484@gmail.com'
-app.config['MAIL_PASSWORD']='...........'
+app.config['MAIL_PASSWORD']='..........'
 mail=Mail(app)
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
@@ -43,7 +43,7 @@ def send_message():
     except Exception as e:
         print(f"Failed to send Email:{e}")
         flash('Error while sending message.','error')
-    return redirect('/#contactMe')
+    return redirect('/#contactme')
 
 @app.route('/#project')
 def project():
