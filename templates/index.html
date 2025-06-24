@@ -25,17 +25,17 @@
    <h2>PYTHON FULLLSTACK WEB DEVELOPER</h2>
       <div class="main">
      <div class="intro">
-    <p>Hi....Iam <span>Safeela Nasrin</span>
+    <p>Hi....       Iam <span class="typing">Safeela Nasrin</span>
         a passionate Full-Stack Developer with expertise in creating dynamic, user-friendly web applications. With a strong foundation in both front-end and back-end technologies,
         I specialize in building scalable, high-performance websites and solutions. I love transforming ideas into interactive and functional digital experiences, blending creativity
          with technical precision.</p>
 
         <a href="{{ url_for('download_file', filename='safeelanasrin_cv.pdf') }}"
-           style="text-decoration:none;color:white;"><button class="btn">Download CV </button></a>
+           style="text-decoration:none;color:white;display:flex;justify-content: center;align-items: center;" class="btn">Download CV</a>
 
         </div>
         <div class="image">
-            <!-- <img src="./static/images/me.jpeg" height="280px" width="200px" > -->
+            <img src="./static/images/me.jpeg" height="280px" width="200px" >
         </div>
         </div>
         
@@ -53,14 +53,19 @@
         <p>I build modern, scalable, and user-friendly web applications from front to back. As a full-stack web developer, I specialize in crafting clean, responsive interfaces and robust back-end systems. Whether it's building an eCommerce store, a custom dashboard, or integrating third-party APIs, I focus on delivering high-performance, secure, and maintainable solutions.</p>
         </div>
         <div class="logo">
-       <div class="css"><img src="{{url_for('static',filename='images/css_logo.png')}}" height="100px" width="40%"><p>CSS</p></div> 
-        <div class="html"><img src="{{url_for('static',filename='images/html_image.png')}}" height="100px" width="40%"><p>HTML</p></div>
-        <div class="boot"><img src="{{url_for('static',filename='images/bootstrap_logo.png')}}" height="100px" width="40%"><p>Bootstrap</p></div>
-        <div class="python"><img src="{{url_for('static',filename='images/python_logo.png')}}" height="100px" width="40%"><p>Python</p></div>
-        <div class="django"><img src="{{url_for('static',filename='images/django_logo.png')}}" height="100px" width="40%"><p>Django</p></div>
-        <div class="flask"><img src="{{url_for('static',filename='images/flask_logo.png')}}" height="100px" width="40%"><p>Flask</p></div>
-        <div class="js"><img src="{{url_for('static',filename='images/javascript_logo.png')}}" height="100px" width="40%"><p>JavaScript</p></div>
-        <div class="react"><img src="{{url_for('static',filename='images/react_logo.png')}}" height="100px" width="40%"><p>React</p></div>
+       <div class="css"><img src="{{url_for('static',filename='images/css_logo.png')}}" height="100px" width="40%"></div> 
+        <div class="html"><img src="{{url_for('static',filename='images/html_image.png')}}" height="100px" width="40%"></div>
+        <div class="boot"><img src="{{url_for('static',filename='images/bootstrap_logo.png')}}" height="100px" width="40%"></div>
+        <div class="python"><img src="{{url_for('static',filename='images/python_logo.png')}}" height="100px" width="40%"></div>
+        <div class="django"><img src="{{url_for('static',filename='images/django_logo.png')}}" height="100px" width="40%"></div>
+        <div class="flask"><img src="{{url_for('static',filename='images/flask_logo.png')}}" height="100px" width="40%"></div>
+        <div class="js"><img src="{{url_for('static',filename='images/javascript_logo.png')}}" height="100px" width="40%"></div>
+        <div class="react"><img src="{{url_for('static',filename='images/react_logo.png')}}" height="100px" width="40%"></div>
+        <div class="tkinter"><img src="{{url_for('static',filename='images/tkinter_logo.jpg')}}" height="100px" width="40%"></div>
+        <div class="razorpay"><img src="{{url_for('static',filename='images/razorpay_logo.jpg')}}" height="100px" width="40%"></div>
+        <div class="restapi"><img src="{{url_for('static',filename='images/restapi_logo.svg')}}" height="100px" width="40%"></div>
+        
+
         </div>
 
     </div>
@@ -204,6 +209,118 @@
   {% endwith %}
 </p>
 </section>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const indexSection = document.querySelector("#index");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Add animation classes when #index is visible
+        document.querySelector('.intro')?.classList.add('fade-in-slide');
+        document.querySelector('.image')?.classList.add('pop-up-zoom');
+        document.querySelector('.btn')?.classList.add('slide-bounce');
+      } else {
+        // Remove them when user scrolls out of #index
+        document.querySelector('.intro')?.classList.remove('fade-in-slide');
+        document.querySelector('.image')?.classList.remove('pop-up-zoom');
+        document.querySelector('.btn')?.classList.remove('slide-bounce');
+      }
+    });
+  }, {
+    threshold: 0.3 // Trigger when 30% of #index is visible
+  });
+
+  if (indexSection) {
+    observer.observe(indexSection);
+  }
+});
+
+// skill
+
+document.addEventListener("DOMContentLoaded", () => {
+  const skillCards = document.querySelectorAll("#skills .logo > div");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Trigger animation every time section enters viewport
+        skillCards.forEach((card, index) => {
+          card.style.animation = 'none';              // reset animation
+          card.offsetHeight;                          // force reflow
+          card.style.animation = `slideInLeft 0.7s ease-out ${index * 0.1}s forwards`;
+        });
+      } else {
+        // Reset style when out of view so it can animate again
+        skillCards.forEach(card => {
+          card.style.opacity = '0';
+          card.style.transform = 'translateX(-60px)';
+        });
+      }
+    });
+  }, { threshold: 0.2 });
+
+  observer.observe(document.querySelector('#skills'));
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const textElements = document.querySelectorAll("#skills .text2 h2, #skills .text2 p");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        textElements.forEach((el, i) => {
+          // Reset and re-trigger animation
+          el.style.animation = "none";
+          el.offsetHeight; // force reflow
+          el.style.animation = `skewReveal 0.8s ease-out ${i * 0.2}s forwards`;
+        });
+      } else {
+        // Reset styles so it can animate again
+        textElements.forEach(el => {
+          el.style.opacity = "0";
+          el.style.transform = "skewX(-20deg) translateX(-50px)";
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+
+  const skillsSection = document.querySelector("#skills");
+  if (skillsSection) observer.observe(skillsSection);
+});
+
+// project
+
+document.addEventListener("DOMContentLoaded", () => {
+  const projectSection = document.querySelector("#project");
+  const cards = document.querySelectorAll(".grid .grid2, .grid .grid4, .grid .grid5, .grid .grid6, .grid .grid7, .grid .grid9");
+  const texts = document.querySelectorAll(".grid .discription2, .grid .discription4, .grid .discription5, .grid .discription6, .grid .discription7, .grid .discription9");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        cards.forEach(card => {
+          card.style.animation = "none";
+          void card.offsetWidth; // trigger reflow
+          card.style.animation = "zoomFade 0.8s ease-out forwards";
+        });
+
+        texts.forEach(text => {
+          text.style.animation = "none";
+          void text.offsetWidth; // trigger reflow
+          text.style.animation = "riseUp 0.7s ease forwards";
+        });
+      }
+    });
+  }, { threshold: 0.2 });
+
+  if (projectSection) observer.observe(projectSection);
+});
+
+</script>
+
+
 
 </body>
 </html>
